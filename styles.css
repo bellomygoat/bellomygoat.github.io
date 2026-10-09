@@ -3,9 +3,9 @@
    ========================================== */
    body {
     font-family: 'Courier Prime', 'Courier New', monospace;
-    background-color: #55aaaa; /* Classic 90s desktop operating system green */
-    background-image: radial-gradient(#3a8787 20%, transparent 20%);
-    background-size: 6px 6px; 
+    background-color: #fb0ea0; /* Classic 90s desktop operating system green */
+    background-image: radial-gradient(#000000 20%, transparent 20%);
+    background-size: 6px 10px; 
     margin: 0;
     padding: 30px 20px;
     display: flex;
@@ -27,7 +27,7 @@
 }
 
 .window-titlebar {
-    background: linear-gradient(90deg, #000080, #1084d0); 
+    background: linear-gradient(90deg, #cf57ed, #9b02cf); 
     color: white;
     padding: 4px 8px;
     font-family: 'VT323', monospace;
@@ -318,3 +318,42 @@ input:focus, textarea:focus {
     animation: spin 4s linear infinite;
 }
 
+/* ==========================================
+   9. CO-EXISTING NETWORK CONTACT BADGES
+   ========================================== */
+   .network-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Splits the bar evenly down the middle */
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Collapses cleanly into a single vertical stack on narrow phone views */
+@media (max-width: 600px) {
+    .network-contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.network-badge {
+    background-color: #000000; /* Inset terminal black screen screens */
+    border: 2px inset #ffffff;
+    padding: 8px 12px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.badge-label {
+    color: #00ff00; /* Matrix terminal green identifier */
+    font-weight: bold;
+}
+
+.badge-value {
+    color: #ff007f; /* Your signature hotpink info read-out text */
+}
