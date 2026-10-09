@@ -356,3 +356,17 @@ input, textarea, select {
     overflow: hidden; /* Keeps the frame clean and cropped to the native playbar row */
     box-sizing: border-box;
 }
+/* ==========================================
+   PURE CSS RETRO TERMINAL FLASHING CURSOR
+   ========================================== */
+   @keyframes placeholderFlash {
+    0%, 100% { opacity: 0.3; color: #004400; }
+    50% { opacity: 1; color: #00ff00; }
+}
+
+/* This forces your inputs to have a continuous old-school neon pulsing glow */
+input::placeholder, textarea::placeholder {
+    color: #00ff00 !important;
+    text-shadow: 0 0 4px rgba(0, 255, 0, 0.6);
+    animation: placeholderFlash 2s infinite ease-in-out;
+}
