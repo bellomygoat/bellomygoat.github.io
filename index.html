@@ -6,48 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bello's corner</title>
     
-    <!-- Retro Google Fonts -->
+    <!-- Retro Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome Icons -->
+    <!-- Icons Link -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=6">
 </head>
-<body>
+<body id="desktop-environment">
 
-    <!-- Main Desktop Window Wrapper -->
-    <div class="retro-window main-window">
-        <div class="window-titlebar">
-            <span>bello_workspace.exe</span>
-            <div class="titlebar-buttons"><span>_</span><span>[ ]</span><span>X</span></div>
-        </div>
-        
-        <div class="window-content">
-            <!-- Header Section -->
-            <header class="profile-header">
-                <b class="username">˗ˏˋ ꒰ bello's ꒱ ˎˊ˗</b>
-                
-                <div class="profile-image-container">
-                    <img src="image.png" alt="[22]" class="profile-png">
-                </div>
-                
-                <h2 class="tagline">⋆ game tester ⋆ diskjockey ⋆ writer ⋆ music ⋆</h2>
-                <p class="age-tag">⋆22⋆</p>
-
-                <div class="social-links">
-                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://discord.com" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
-                    <a href="https://twitch.tv" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
-                </div>
-            </header>
-        </div>
-    </div>
-
-    <!-- Media Player Frame Window -->
-    <div class="retro-window media-window bounce-animation">
+    <!-- TOP MP3 AUDIO DECK BANNER -->
+    <div class="retro-window media-banner">
         <div class="window-titlebar">
             <span>amp_player.dsp</span>
             <div class="titlebar-buttons"><span>[audio]</span></div>
@@ -55,42 +26,123 @@
         <div class="window-content media-content">
             <div class="media-art"><i class="fas fa-compact-disc spinning-disc"></i></div>
             <div class="media-info">
-                <marquee scrollamount="2">TRACK_01.MP3 - LOFI_TWILIGHT_MIX_REC</marquee>
+                <marquee scrollamount="2" direction="left">TRACK_01.MP3 - LOFI_TWILIGHT_MIX_REC</marquee>
                 <div class="media-controls">
-                    <button class="retro-btn-sm"><i class="fas fa-backward"></i></button>
-                    <button class="retro-btn-sm"><i class="fas fa-play"></i></button>
-                    <button class="retro-btn-sm"><i class="fas fa-forward"></i></button>
+                    <button class="retro-btn-sm">REQ</button>
+                    <button class="retro-btn-sm">PLAY</button>
+                    <button class="retro-btn-sm">STOP</button>
                 </div>
+            </div>
+            
+            <div class="banner-stamp">
+                <b class="username">˗ˏˋ ꒰ bello's ꒱ ˎˊ˗</b>
+                <span class="age-stamp">⋆22⋆</span>
             </div>
         </div>
     </div>
 
-    <!-- Portfolio Box Window -->
-    <div class="retro-window portfolio-window">
-        <div class="window-titlebar">
-            <span>portfolio_index.sys</span>
-            <div class="titlebar-buttons"><span>[dir]</span></div>
+    <!-- MAIN 2x2 GRID SYSTEM CONTROLLER -->
+    <div class="desktop-grid-2x2">
+
+        <!-- PANEL 1: WHAT I DID -->
+        <div class="retro-window grid-panel">
+            <div class="window-titlebar">
+                <span>what_i_did.log</span>
+                <div class="titlebar-buttons"><span>[history]</span></div>
+            </div>
+            <div class="window-content panel-scroll">
+                <h3 class="panel-heading">C:\HISTORY\> type archives.txt</h3>
+                <ul class="pixel-list">
+                    <li>✦ Completed closed alpha game testing cycles for underground titles.</li>
+                    <li>✦ Structured multi-genre transitions for local streaming mix sessions.</li>
+                    <li>✦ Logged multiple world-building prose manuscripts and script logs.</li>
+                </ul>
+            </div>
         </div>
-        <div class="window-content">
-            <h3 class="section-title">C:\> dir /portfolio</h3>
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <h4>/game_tests/</h4>
-                    <p>QAC++</p>
+
+        <!-- PANEL 2: WHAT I DO -->
+        <div class="retro-window grid-panel">
+            <div class="window-titlebar">
+                <span>what_i_do.sys</span>
+                <div class="titlebar-buttons"><span>[active]</span></div>
+            </div>
+            <div class="window-content panel-scroll">
+                <h3 class="panel-heading">C:\ACTIVE\> run diagnostic.exe</h3>
+                <div class="profile-image-row">
+                    <div class="profile-image-container">
+                        <img src="image.png" alt="" class="profile-png">
+                    </div>
+                    <div class="status-box">
+                        <p>⋆ game tester</p>
+                        <p>⋆ diskjockey</p>
+                        <p>⋆ writer</p>
+                        <p>⋆ music enthusiast</p>
+                    </div>
                 </div>
-                <div class="portfolio-card">
-                    <h4>/dj_mixes/</h4>
-                    <p>Monthly Playlist + Archive</p>
-                </div>
-                <div class="portfolio-card">
-                    <h4>/swe_v2/</h4>
-                    <p>Uni -> Current Projects</p>
+                <div class="social-links">
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://twitch.tv" target="_blank"><i class="fab fa-twitch"></i></a>
                 </div>
             </div>
         </div>
+
+        <!-- PANEL 3: WHAT I LIKE -->
+        <div class="retro-window grid-panel">
+            <div class="window-titlebar">
+                <span>what_i_like.fav</span>
+                <div class="titlebar-buttons"><span>[interests]</span></div>
+            </div>
+            <div class="window-content panel-scroll">
+                <h3 class="panel-heading">C:\INTERESTS\> dir /favorites</h3>
+                <div class="interests-box">
+                    <div class="interest-tag">/deep_ambient_house</div>
+                    <div class="interest-tag">/retro_hardware_hacks</div>
+                    <div class="interest-tag">/cyberpunk_novels</div>
+                    <div class="interest-tag">/dark_pixel_art</div>
+                    <div class="interest-tag">/glitch_aesthetics</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANEL 4: WHAT ABOUT YOU? (INTERACTIVE BUILDER TERMINAL) -->
+        <div class="retro-window grid-panel">
+            <div class="window-titlebar">
+                <span>what_about_you.cfg</span>
+                <div class="titlebar-buttons"><span>[build_tool]</span></div>
+            </div>
+            <div class="window-content panel-scroll">
+                <h3 class="panel-heading">C:\CREATOR\> initialize generator</h3>
+                
+                <!-- Dynamic creator input panel structure -->
+                <div id="creator-workspace">
+                    <p style="margin: 0 0 10px 0; font-size: 0.85rem;">Input details to spawn your own customized window deck view:</p>
+                    <div class="form-group">
+                        <label for="user-handle">alias :</label>
+                        <input type="text" id="user-handle" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-status">status :</label>
+                        <input type="text" id="user-status" placeholder="What do you do?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-theme">color :</label>
+                        <select id="user-theme">
+                            <option value="#ff007f">Neon Hotpink</option>
+                            <option value="#000080">Navy Blue</option>
+                            <option value="#00ff00">Matrix Green</option>
+                            <option value="#7a00ff">Gothic Purple</option>
+                        </select>
+                    </div>
+                    <button id="generate-page-btn" class="submit-button">GENERATE_PAGE.EXE</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <!-- Contact Form Window -->
+    <!-- LEAVE A MESSAGE / CONTACT TERMINAL WINDOW -->
     <div class="retro-window form-window">
         <div class="window-titlebar">
             <span>message_terminal.txt</span>
@@ -103,30 +155,36 @@
                 <input type="hidden" name="redirect" value="https://web3forms.com">
 
                 <div class="form-group">
-                    <label for="name">n a m e :</label>
+                    <label for="name">name :</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="email">e m a i l :</label>
+                    <label for="email">email :</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="phone">p h o n e :</label>
+                    <label for="phone">phone :</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="message">m e s s a g e :</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">msg :</label>
+                    <textarea id="message" name="message" rows="3" required></textarea>
                 </div>
                 
-                <button type="submit" class="submit-button">send :b</button>
+                <button type="submit" class="submit-button">SUBMIT.EXE</button>
             </form>
         </div>
     </div>
 
+    <!-- RETRO SITE FOOTER -->
+    <footer class="retro-footer">
+        <div class="footer-text">EST. 2026 | PAGE BY XYZ</div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
 
