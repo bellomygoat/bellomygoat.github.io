@@ -61,7 +61,7 @@
                })
                .then(function(response) {
                    if (response.status === 200) {
-                       alert('🎉 Message sent successfully! Check your inbox in a few seconds.');
+                       alert(' Message sent successfully! Check your inbox in a few seconds.');
                        form.reset();
                    } else {
                        alert('Oops! System submission error.');
