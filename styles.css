@@ -289,6 +289,58 @@ input:focus, textarea:focus {
 }
 
 /* ==========================================
+   6. CYBER TERMINAL INPUT BOXES (MP3 CONTRAST)
+   ========================================== */
+   input, textarea {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #0d1117; /* Exact matching MP3 player deep black color */
+    border: 3px inset #888888; /* Chiseled retro bevel frame edge layout */
+    font-family: 'Courier Prime', monospace;
+    font-size: 1rem;
+    color: #00ff00;            /* Vibrant terminal green text glow matching the MP3 screen */
+    text-shadow: 0 0 4px rgba(0, 255, 0, 0.5); /* Soft retro green glow profile */
+    box-sizing: border-box;
+}
+
+/* Neon focus box border lines when clicked */
+input:focus, textarea:focus, select:focus {
+    outline: 2px dashed #ff007f; /* Changes border accent to hotpink when typing */
+    background-color: #05070a;   /* Slightly deeper black contrast focus box */
+}
+
+/* Custom placeholder text color manipulation matching the look */
+input::placeholder, textarea::placeholder {
+    color: #005500; /* Darker green text placeholder fallback states */
+    text-shadow: none;
+}
+
+/* Custom drop-down selector matching configurations */
+select {
+    flex-grow: 1;
+    padding: 8px;
+    font-family: 'Courier Prime', monospace;
+    background-color: #0d1117;
+    color: #00ff00;
+    border: 3px inset #888888;
+    text-shadow: 0 0 4px rgba(0, 255, 0, 0.5);
+}
+
+/* ==========================================
+   6B. GREEN TERMINAL ANIMATION EFFECTS
+   ========================================== */
+/* Subtle text glow animation that mimics screen refreshing */
+@keyframes terminalPulse {
+    0%, 100% { text-shadow: 0 0 3px rgba(0, 255, 0, 0.4); }
+    50% { text-shadow: 0 0 6px rgba(0, 255, 0, 0.7); }
+}
+
+input, textarea, select {
+    animation: terminalPulse 4s infinite ease-in-out;
+}
+
+
+/* ==========================================
    7. FOOTER BAR ARCHITECTURE
    ========================================== */
 .retro-footer {
