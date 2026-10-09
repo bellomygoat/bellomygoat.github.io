@@ -29,7 +29,8 @@
            }
            
            // FIXED REGEX PATTERN (Removed the stray backslash at the end)
-           const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+\$/;
+           // Change line 32 to look exactly like this:
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
            if (email === '' || !emailPattern.test(email)) {
                const err = document.getElementById('emailError');
                if (err) { err.textContent = 'Valid email is required'; err.style.display = 'block'; }
