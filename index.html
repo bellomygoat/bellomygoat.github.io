@@ -32,15 +32,15 @@
             <!-- SOUNDCLOUD EMBED CONTAINER (Sleek dark mini-player layout) -->
             <div class="soundcloud-container">
                 <!-- You can swap out the track ID at the end of the URL with your favorite song later! -->
-                <iframe width="88%" height="60" scrolling="no" frameborder="no" allow="autoplay" 
+                <iframe width="100%" height="60" scrolling="no" frameborder="no" allow="autoplay" 
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1376215258&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                 </iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/dj_surveillance" title="pure66" target="_blank" style="color: #cccccc; text-decoration: none;">pure66</a> · <a href="https://soundcloud.com/dj_surveillance/super-monky-ball-bubble-machine-stage" title="Super Monky Ball Bubble Machine Stage" target="_blank" style="color: #cccccc; text-decoration: none;">Super Monky Ball Bubble Machine Stage</a></div>">
                 </iframe>
             </div>
             
             <div class="banner-stamp">
-                <b class="username">˗ˏˋ ꒰ bello's ꒱ ˎˊ˗</b>
-                <span class="star-stamp">⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆</span>
+                <b class="username">˗ˏˋ꒰ bello ꒱ˎˊ˗</b>
+                <span class="star-stamp">⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆</span>
             </div>
         </div>
     </div>
@@ -114,41 +114,63 @@
             </div>
         </div>
 
-        <!-- PANEL 4: WHAT ABOUT YOU? (INTERACTIVE BUILDER TERMINAL) -->
+        <!-- PANEL 4: WHAT ABOUT YOU? -->
         <div class="retro-window grid-panel">
             <div class="window-titlebar">
-                <span>what_about_you.cstm</span>
+                <span>what_about_you.cfg</span>
                 <div class="titlebar-buttons"><span>[build_tool]</span></div>
             </div>
             <div class="window-content panel-scroll">
-                <h3 class="panel-heading">\CREATOR\ initialize generator</h3>
-                
-                <!-- Dynamic creator input panel structure -->
+                <h3 class="panel-heading">C:\CREATOR\> initialize generator</h3>
                 <div id="creator-workspace">
-                    <p style="margin: 0 0 9px 0; font-size: 0.85rem;">Input deets to spawn your own customized window deck:</p>
+                    <p style="margin: 0 0 10px 0; font-size: 0.85rem;">Input details to spawn your own customized window deck view:</p>
+                    
                     <div class="form-group">
                         <label for="user-handle">alias :</label>
-                        <input type="text" id="user-handle" placeholder="" required>
+                        <input type="text" id="user-handle" placeholder="[ ENTER NAME ]" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="user-status">status :</label>
-                        <input type="text" id="user-status" placeholder="" required>
+                        <input type="text" id="user-status" placeholder="[ WHAT DO YOU DO? ]" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="user-theme">color :</label>
                         <select id="user-theme">
-                            <option value="#ff007f">Pink</option>
-                            <option value="#000080">Blue</option>
-                            <option value="#00ff00">Green</option>
-                            <option value="#7a00ff">Purple</option>
-                            <option value="#55aaaa">Teal</option>
+                            <option value="#ff007f">Neon Hotpink</option>
+                            <option value="#000080">Navy Blue</option>
+                            <option value="#00ff00">Matrix Green</option>
+                            <option value="#7a00ff">Gothic Purple</option>
+                            <option value="#55aaaa">Classic Teal</option>
                         </select>
                     </div>
+
+                    <!-- NEW: RETRO WALLPAPER SELECTION -->
+                    <div class="form-group">
+                        <label for="user-wallpaper">pattern :</label>
+                        <select id="user-wallpaper">
+                            <option value="bg-grid">Retro Dot Grid</option>
+                            <option value="bg-pixels">90s Pixel Tile</option>
+                            <option value="bg-solid">Solid Canvas</option>
+                        </select>
+                    </div>
+
+                    <!-- NEW: BACKGROUND AMBIENT SOUND MATRIX -->
+                    <div class="form-group">
+                        <label for="user-music">ambient :</label>
+                        <select id="user-music">
+                            <option value="https://soundhelix.com">Track 02 (Synthwave)</option>
+                            <option value="https://soundhelix.com">Track 04 (Cyber Chill)</option>
+                            <option value="none">No Audio Stream</option>
+                        </select>
+                    </div>
+
                     <button id="generate-page-btn" class="submit-button">GENERATE_PAGE.EXE</button>
                 </div>
             </div>
         </div>
-    
+        
     </div>
 
       <!-- LEAVE A MESSAGE / CONTACT TERMINAL WINDOW -->
