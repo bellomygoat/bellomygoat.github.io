@@ -1,55 +1,52 @@
 /* ==========================================================================
-   1. CONTACT FORM HANDLER (QUIET BACKGROUND AJAX SUBMISSION TO WEB3FORMS)
+   1. CONTACT FORM HANDLER (QUIET BACKGROUND AJAX SUBMISSION)
    ========================================================================== */
    const contactForm = document.getElementById('contactForm');
+
    if (contactForm) {
        contactForm.addEventListener('submit', function (event) {
-           event.preventDefault(); // Prevents the browser from crashing into a white screen!
+           event.preventDefault(); // Stalls normal browser redirect to prevent white screens!
    
            const form = event.target;
            const button = form.querySelector('.submit-button');
    
-           // Clear all previous validation error messages
+           // Clear all previous validation error tracking text layers
            const errorElements = document.querySelectorAll('.error-message');
-           errorElements.forEach(el => el.style.display = 'none');
+           errorElements.forEach(function(el) {
+               el.style.display = 'none';
+           });
    
-           // Grab field values
-           const name = document.getElementById('name').value.trim();
-           const email = document.getElementById('email').value.trim();
-           const phone = document.getElementById('phone').value.trim();
-           const message = document.getElementById('message').value.trim();
+           // Fetch user string inputs
+           const nameValue = document.getElementById('name').value.trim();
+           const emailValue = document.getElementById('email').value.trim();
+           const messageValue = document.getElementById('message').value.trim();
    
            let isValid = true;
    
-           // Fast validation checks
-           if (name === '') {
+           // Basic verification processing logs
+           if (nameValue === '') {
                const err = document.getElementById('nameError');
                if (err) { err.textContent = 'Name is required'; err.style.display = 'block'; }
                isValid = false;
            }
-           
-           // FIXED REGEX PATTERN (Removed the stray backslash at the end)
-           // Change line 32 to look exactly like this:
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-           if (email === '' || !emailPattern.test(email)) {
+           if (emailValue === '') {
                const err = document.getElementById('emailError');
-               if (err) { err.textContent = 'Valid email is required'; err.style.display = 'block'; }
+               if (err) { err.textContent = 'Email is required'; err.style.display = 'block'; }
                isValid = false;
            }
-           if (message === '') {
+           if (messageValue === '') {
                const err = document.getElementById('messageError');
                if (err) { err.textContent = 'Message is required'; err.style.display = 'block'; }
                isValid = false;
            }
    
-           // Send data quietly in the background using AJAX JSON packaging
+           // Send data quietly in the background using standard JSON formatting strings
            if (isValid) {
                if (button) {
-                   button.textContent = "sending..."; // Visual cue for the user
+                   button.textContent = "sending...";
                    button.disabled = true;
                }
    
-               // Gather up all input data fields including your secret access_key
                const formData = new FormData(form);
                const object = Object.fromEntries(formData);
                const json = JSON.stringify(object);
@@ -62,22 +59,19 @@
                    },
                    body: json
                })
-               .then(async (response) => {
-                   let resultJson = await response.json();
-                   
+               .then(function(response) {
                    if (response.status === 200) {
                        alert('🎉 Message sent successfully! Check your inbox in a few seconds.');
-                       form.reset(); // Clears out the form text boxes completely
+                       form.reset();
                    } else {
-                       alert('Oops! ' + resultJson.message);
+                       alert('Oops! System submission error.');
                    }
                })
-               .catch(error => {
-                   alert('Oops! There was a network issue connecting to the server.');
+               .catch(function(error) {
+                   alert('Oops! Network terminal offline.');
                    console.error(error);
                })
-               .then(() => {
-                   // Reset button text back to original aesthetic setup
+               .then(function() {
                    if (button) {
                        button.textContent = "SUBMIT.EXE";
                        button.disabled = false;
@@ -91,20 +85,21 @@
       2. INTERACTIVE PAGE BUILDER ENGINE ("WHAT ABOUT YOU?")
       ========================================================================== */
    const generateBtn = document.getElementById('generate-page-btn');
+   
    if (generateBtn) {
-       generateBtn.addEventListener('click', function() {
-           // Gather up user values from the fields
+       generateBtn.addEventListener('click', function () {
+           // Fetch custom interface styling choices from fields
            const alias = document.getElementById('user-handle').value.trim();
            const status = document.getElementById('user-status').value.trim();
            const selectedColor = document.getElementById('user-theme').value;
    
-           // Fast fallback confirmation step check
+           // Guard validation step to block empty creation streams
            if (alias === '' || status === '') {
                alert("ERROR: Please fill out both terminal input tracks before execution.");
                return;
            }
    
-           // Dynamically overwrite document body layout with a personalized desktop terminal!
+           // Dynamically wipe out the canvas environment framework and render custom desktop
            document.getElementById('desktop-environment').innerHTML = `
                <div style="background-color: ${selectedColor}; background-image: radial-gradient(rgba(0,0,0,0.15) 20%, transparent 20%); background-size: 6px 6px; min-height: 100vh; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; gap: 30px; box-sizing: border-box; width: 100%;">
                    
