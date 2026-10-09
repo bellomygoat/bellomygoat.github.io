@@ -166,11 +166,12 @@
    }
    
    // Safely boot typewriter routines once the layout finishes parsing
-   document.addEventListener('DOMContentLoaded', function() {
-       setTimeout(function() {
-           setupTypewriter('name', 'PREFERRED_NAME');
-           setupTypewriter('email', 'DISCORD_USERNAME');
-           setupTypewriter('message', 'SAY_HI...');
-       }, 400);
-   });
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        setupTypewriter('name', 'PREFERRED_NAME');
+        setupTypewriter('email', 'DISCORD_USERNAME');
+        setupTypewriter('message', 'SAY_HI...');
+    }, 400);
+});
+
    
