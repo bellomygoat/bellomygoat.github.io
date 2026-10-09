@@ -31,7 +31,7 @@
            }
            if (emailValue === '') {
                const err = document.getElementById('emailError');
-               if (err) { err.textContent = 'Email is required'; err.style.display = 'block'; }
+               if (err) { err.textContent = 'Discord handle is required'; err.style.display = 'block'; }
                isValid = false;
            }
            if (messageValue === '') {
@@ -129,48 +129,48 @@
            `;
        });
    }
-   
-
+      
    /* ==========================================================================
-   4. RETRO GREEN TERMINAL TYPEWRITER EFFECT
-   ========================================================================== */
-function setupTypewriter(fieldId, textToType) {
-    const element = document.getElementById(fieldId);
-    if (!element) return;
-
-    let index = 0;
-    let isDeleting = false;
-
-    function typeLoop() {
-        let currentText = textToType.substring(0, index);
-        element.setAttribute('placeholder', currentText + "_"); // Appends the blinking terminal cursor line
-
-        if (!isDeleting) {
-            index++;
-            if (index > textToType.length) {
-                isDeleting = true;
-                setTimeout(typeLoop, 2000); // Pauses at the end of typing
-                return;
-            }
-            setTimeout(typeLoop, 150 + Math.random() * 100); // Humanized random typing speed
-        } else {
-            index--;
-            if (index < 0) {
-                isDeleting = false;
-                setTimeout(typeLoop, 500); // Pauses before restarting loop
-                return;
-            }
-            setTimeout(typeLoop, 50); // Speed of text erasure
-        }
-    }
-
-    typeLoop();
-}
-
-// Fire up the loops once your DOM finishes assembly
-document.addEventListener('DOMContentLoaded', function() {
-    // These IDs hook directly into your id="name", id="email", and id="message" input boxes
-    setupTypewriter('name', 'PREFERRED_NAME');
-    setupTypewriter('email', 'DISCORD_USERNAME');
-    setupTypewriter('message', 'SAY_HI...');
-});
+      4. RETRO GREEN TERMINAL TYPEWRITER EFFECT
+      ========================================================================== */
+   function setupTypewriter(fieldId, textToType) {
+       const element = document.getElementById(fieldId);
+       if (!element) return;
+   
+       let index = 0;
+       let isDeleting = false;
+   
+       function typeLoop() {
+           let currentText = textToType.substring(0, index);
+           element.setAttribute('placeholder', currentText + "_");
+   
+           if (!isDeleting) {
+               index++;
+               if (index > textToType.length) {
+                   isDeleting = true;
+                   setTimeout(typeLoop, 2000);
+                   return;
+               }
+               setTimeout(typeLoop, 150 + Math.random() * 100);
+           } else {
+               index--;
+               if (index < 0) {
+                   isDeleting = false;
+                   setTimeout(typeLoop, 500);
+                   return;
+               }
+               setTimeout(typeLoop, 50);
+           }
+       }
+       typeLoop();
+   }
+   
+   // Safely boot typewriter routines once the layout finishes parsing
+   document.addEventListener('DOMContentLoaded', function() {
+       setTimeout(function() {
+           setupTypewriter('name', 'PREFERRED_NAME');
+           setupTypewriter('email', 'DISCORD_USERNAME');
+           setupTypewriter('message', 'SAY_HI...');
+       }, 400);
+   });
+   

@@ -13,9 +13,14 @@
     
     <!-- Icons Link -->
     <link rel="stylesheet" href="https://cloudflare.com">
+
+        <!-- FORCE LOAD STYLES (CACHE BUST SYSTEM v=99) -->
     <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body id="desktop-environment">
+
+    <!-- PIXELATED HEART SEPARATOR BANNER -->
+    <div class="heart-banner">｡ ₊°༺❤︎༻°₊ ｡</div>
 
     <!-- TOP MP3 AUDIO DECK BANNER -->
     <div class="retro-window media-banner">
@@ -24,19 +29,17 @@
             <div class="titlebar-buttons"><span>[audio]</span></div>
         </div>
         <div class="window-content media-content">
-            <div class="media-art"><i class="fas fa-compact-disc spinning-disc"></i></div>
-            <div class="media-info">
-                <marquee scrollamount="2" direction="left">TRACK_01.MP3 - MOVIES_FOR_GUYS_JANE_REMOVER</marquee>
-                <div class="media-controls">
-                    <button class="retro-btn-sm">REC</button>
-                    <button class="retro-btn-sm">PLAY</button>
-                    <button class="retro-btn-sm">STOP</button>
-                </div>
+            <!-- SOUNDCLOUD EMBED CONTAINER (Sleek dark mini-player layout) -->
+            <div class="soundcloud-container">
+                <!-- You can swap out the track ID at the end of the URL with your favorite song later! -->
+                <iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay" 
+                    src="https://soundcloud.com">
+                </iframe>
             </div>
             
             <div class="banner-stamp">
                 <b class="username">˗ˏˋ ꒰ bello's ꒱ ˎˊ˗</b>
-                <span class="age-stamp">⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆</span>
+                <span class="star-stamp">⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆⋆</span>
             </div>
         </div>
     </div>
@@ -59,8 +62,8 @@
                     <div class="status-box">
                         <p>⋆ writer </p>
                         <p>⋆ engineer </p>
-                        <p>⋆  diskjockey </p>
-                        <p>⋆  game tester </p>
+                        <p>⋆ diskjockey </p>
+                        <p>⋆ game tester </p>
                     </div>
                 </div>
             </div>
@@ -77,8 +80,8 @@
                 <ul class="pixel-list">
                     <li>⋆ Acquired YouTube Premium and Discord Nitro</li>
                     <li>⋆ Being Cute - Radio Show at University Radio Station</li>
-                    <li>⋆ Organizer, Experienced Tester, Cracked Tester, Tester of The Month - QAC</li>
                     <li>⋆ Computer Science Major - Foundations, Algorithms and Artificial Intelligence Focus</li>
+                    <li>⋆ Organizer, Experienced Tester, Cracked Tester, Tester of The Month - Quality Assurance Central</li>
                 </ul>
             </div>
         </div>
@@ -133,35 +136,35 @@
                     <div class="form-group">
                         <label for="user-theme">color :</label>
                         <select id="user-theme">
-                            <option value="#ff007f">Neon Hotpink</option>
-                            <option value="#000080">Navy Blue</option>
-                            <option value="#00ff00">Matrix Green</option>
-                            <option value="#7a00ff">Gothic Purple</option>
+                            <option value="#ff007f">Pink</option>
+                            <option value="#000080">Blue</option>
+                            <option value="#00ff00">Green</option>
+                            <option value="#7a00ff">Purple</option>
+                            <option value="#55aaaa">Teal</option>
                         </select>
                     </div>
                     <button id="generate-page-btn" class="submit-button">GENERATE_PAGE.EXE</button>
                 </div>
             </div>
         </div>
+    
     </div>
-
-         <!-- LEAVE A MESSAGE / CONTACT TERMINAL WINDOW -->
-    <div class="retro-window form-window">
+    
+      <!-- LEAVE A MESSAGE / CONTACT TERMINAL WINDOW -->
+      <div class="retro-window form-window">
         <div class="window-titlebar">
             <span>message_terminal.txt</span>
             <div class="titlebar-buttons"><span>[msg]</span></div>
         </div>
         <div class="window-content">
-            <h4 class="form-divider">｡ ₊°༺❤︎༻°₊ ｡</h4>
-            
-            <!-- We stripped away the duplicate top badge to clean up the workspace! -->
-            <form id="contactForm" action="https://web3forms.com/woolenbella@gmail.com" method="POST">
-                <!-- Remember to keep your secret Web3Forms Access Key right here -->
-                <input type="hidden" name="access_key" value="d26980fb-9620-40a4-a32b-f8cf2cd6bfb5">
+            <h1 class="form-divider">&lt;3 &lt;3 &lt;3 &lt;3 &lt;3 &lt;3 </h1>
+
+            <form id="contactForm" action="https://web3forms.com" method="POST">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
                 <div class="form-group">
                     <label for="name">name:</label> 
-                    <input type="text" id="name" name="name" placeholder= "PREFERRED_NAME" required> 
+                    <input type="text" id="name" name="name" placeholder="PREFERRED_NAME" required> 
                     <span class="error-message" id="nameError"></span>
                 </div>
                 
@@ -173,7 +176,7 @@
                 
                 <div class="form-group">
                     <label for="message">message:</label>
-                    <textarea id="message" name="message" rows="3" placeholder= "SAY_HI..." required></textarea>
+                    <textarea id="message" name="message" rows="3" placeholder="SAY_HI..." required></textarea>
                     <span class="error-message" id="messageError"></span>
                 </div>
                 
@@ -182,15 +185,14 @@
         </div>
     </div>
 
-       <!-- RETRO SITE FOOTER -->
-       <footer class="retro-footer">
+    <!-- RETRO SITE FOOTER (CLEANLY REPAIRED & SEGREGATED) -->
+    <footer class="retro-footer">
+        <div class="heart-banner">｡ ₊°༺❤︎༻°₊ ｡</div>
         <div class="footer-text">Est. 2026 by bello</div>
     </footer>
 
-        <!-- This force-loads the script file directly from the GitHub server -->
-        <script src="script.js?v=1"></script>
+    <!-- Cache-busted script loading track link -->
+    <script src="script.js?v=9"></script>
 
 </body>
 </html>
-
-           

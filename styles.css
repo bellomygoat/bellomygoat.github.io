@@ -3,7 +3,7 @@
    ========================================== */
    body {
     font-family: 'Courier Prime', 'Courier New', monospace;
-    background-color: #fb0ea0; /* Classic 90s desktop operating system green */
+    background-color: #fb0ea0; /* Your signature vibrant background */
     background-image: radial-gradient(#000000 20%, transparent 20%);
     background-size: 6px 10px; 
     margin: 0;
@@ -14,6 +14,18 @@
     gap: 30px; 
     min-height: 100vh;
     box-sizing: border-box;
+    width: 100%;
+}
+
+.heart-banner {
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    color: #000000; 
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 0px rgba(255,255,255,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
 }
 
 /* ==========================================
@@ -24,6 +36,7 @@
     border: 3px outset #ffffff; 
     box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
     box-sizing: border-box;
+    width: 100%;
 }
 
 .window-titlebar {
@@ -121,13 +134,12 @@
    ========================================== */
 .desktop-grid-2x2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Forms an explicit 2-column workspace blueprint */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 25px;
     max-width: 900px;
     width: 100%;
 }
 
-/* Responsive grid collapsing breakpoint for mobile scaling environments */
 @media (max-width: 768px) {
     .desktop-grid-2x2 {
         grid-template-columns: 1fr;
@@ -141,7 +153,7 @@
 
 .panel-scroll {
     height: calc(100% - 30px);
-    overflow-y: auto; /* Adds retro panel inner track scrolling mechanics if text overrides window volume */
+    overflow-y: auto; 
 }
 
 .panel-heading {
@@ -154,7 +166,6 @@
 /* ==========================================
    5. INDEVAL CONTENT PANELS INTERNALS
    ========================================== */
-/* Profile Image Row Adjustment */
 .profile-image-row {
     display: flex;
     gap: 15px;
@@ -178,6 +189,7 @@
     margin: 4px 0;
     font-size: 0.85rem;
     font-weight: bold;
+    color: #000;
 }
 
 .pixel-list {
@@ -189,6 +201,7 @@
     font-size: 0.85rem;
     margin-bottom: 8px;
     line-height: 1.4;
+    color: #000;
 }
 
 .interests-box {
@@ -204,39 +217,28 @@
     color: #333;
 }
 
-.social-links {
-    margin-top: 12px;
-}
-.social-links a {
-    color: #000080;
-    font-size: 1.3rem;
-    margin-right: 12px;
-    text-decoration: none;
-}
-.social-links a:hover {
-    color: #ff007f;
-}
-
-/* Selector customizer element style overrides */
 select {
     flex-grow: 1;
-    padding: 4px;
-    font-family: inherit;
-    background-color: #fff;
-    border: 2px inset #888888;
+    padding: 8px;
+    font-family: 'Courier Prime', monospace;
+    background-color: #0d1117;
+    color: #00ff00;
+    border: 3px inset #888888;
+    text-shadow: 0 0 4px rgba(0, 255, 0, 0.5);
 }
 
 /* ==========================================
    6. CONTACT PANEL STYLES AND INPUT CONTROLS
    ========================================== */
 .form-window {
-    max-width: 900px;
-    width: 100%;
+    max-width: 900px !important; /* Forces layout equality with the wide header banner */
+    width: 100% !important;
+    box-sizing: border-box;
 }
 
 .form-divider {
     text-align: center;
-    color: #ff007f;
+    color: #000000;
     margin-bottom: 15px;
 }
 
@@ -247,21 +249,32 @@ select {
 }
 
 .form-group label {
-    width: 80px;
+    width: 90px;
     font-weight: bold;
     font-size: 0.95rem;
+    color: #000;
 }
 
 input, textarea {
     flex-grow: 1;
-    padding: 6px;
-    background-color: #ffffff;
-    border: 2px inset #888888; 
+    padding: 10px;
+    background-color: #0d1117; 
+    border: 3px inset #888888; 
     font-family: 'Courier Prime', monospace;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    color: #00ff00;            
+    text-shadow: 0 0 4px rgba(0, 255, 0, 0.5); 
+    box-sizing: border-box;
 }
-input:focus, textarea:focus {
-    outline: 2px solid #ff007f; 
+
+input:focus, textarea:focus, select:focus {
+    outline: 2px dashed #ff007f; 
+    background-color: #05070a;   
+}
+
+input::placeholder, textarea::placeholder {
+    color: #005500; 
+    text-shadow: none;
 }
 
 .submit-button {
@@ -286,59 +299,19 @@ input:focus, textarea:focus {
     font-size: 1rem;
     cursor: pointer;
     color: #000;
+    padding: 2px 8px;
+}
+.retro-btn-sm:active {
+    border: 2px inset #ffffff;
 }
 
-/* ==========================================
-   6. CYBER TERMINAL INPUT BOXES (MP3 CONTRAST)
-   ========================================== */
-   input, textarea {
-    flex-grow: 1;
-    padding: 10px;
-    background-color: #0d1117; /* Exact matching MP3 player deep black color */
-    border: 3px inset #888888; /* Chiseled retro bevel frame edge layout */
-    font-family: 'Courier Prime', monospace;
-    font-size: 1rem;
-    color: #00ff00;            /* Vibrant terminal green text glow matching the MP3 screen */
-    text-shadow: 0 0 4px rgba(0, 255, 0, 0.5); /* Soft retro green glow profile */
-    box-sizing: border-box;
-}
-
-/* Neon focus box border lines when clicked */
-input:focus, textarea:focus, select:focus {
-    outline: 2px dashed #ff007f; /* Changes border accent to hotpink when typing */
-    background-color: #05070a;   /* Slightly deeper black contrast focus box */
-}
-
-/* Custom placeholder text color manipulation matching the look */
-input::placeholder, textarea::placeholder {
-    color: #005500; /* Darker green text placeholder fallback states */
-    text-shadow: none;
-}
-
-/* Custom drop-down selector matching configurations */
-select {
-    flex-grow: 1;
-    padding: 8px;
-    font-family: 'Courier Prime', monospace;
-    background-color: #0d1117;
-    color: #00ff00;
-    border: 3px inset #888888;
-    text-shadow: 0 0 4px rgba(0, 255, 0, 0.5);
-}
-
-/* ==========================================
-   6B. GREEN TERMINAL ANIMATION EFFECTS
-   ========================================== */
-/* Subtle text glow animation that mimics screen refreshing */
 @keyframes terminalPulse {
     0%, 100% { text-shadow: 0 0 3px rgba(0, 255, 0, 0.4); }
     50% { text-shadow: 0 0 6px rgba(0, 255, 0, 0.7); }
 }
-
 input, textarea, select {
     animation: terminalPulse 4s infinite ease-in-out;
 }
-
 
 /* ==========================================
    7. FOOTER BAR ARCHITECTURE
@@ -347,20 +320,21 @@ input, textarea, select {
     width: 100%;
     max-width: 900px;
     text-align: center;
-    border-top: 2px dashed #3a8787;
-    padding-top: 15px;
-    margin-top: 10px;
+    border-top: 2px dashed #000000;
+    padding-top: 20px;
+    margin-top: 15px;
+    box-sizing: border-box;
 }
 
 .footer-text {
     font-family: 'VT323', monospace;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: #ffffff;
-    text-shadow: 1px 1px #000;
+    text-shadow: 2px 2px #000000;
     letter-spacing: 2px;
+    margin-top: 10px;
 }
 
-/* Spinning Disc Tracker Animation */
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
@@ -369,43 +343,14 @@ input, textarea, select {
     display: inline-block;
     animation: spin 4s linear infinite;
 }
-
 /* ==========================================
-   9. CO-EXISTING NETWORK CONTACT BADGES
+   SOUNDCLOUD STREAM EMBED SCALING FIX
    ========================================== */
-   .network-contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Splits the bar evenly down the middle */
-    gap: 12px;
-    margin-bottom: 20px;
+   .soundcloud-container {
+    flex-grow: 1;
+    max-width: 650px;
     width: 100%;
-    box-sizing: border-box;
-}
-
-/* Collapses cleanly into a single vertical stack on narrow phone views */
-@media (max-width: 600px) {
-    .network-contact-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.network-badge {
-    background-color: #000000; /* Inset terminal black screen screens */
-    border: 2px inset #ffffff;
-    padding: 8px 12px;
-    font-family: 'Courier Prime', monospace;
-    font-size: 0.85rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.badge-label {
-    color: #00ff00; /* Matrix terminal green identifier */
-    font-weight: bold;
-}
-
-.badge-value {
-    color: #ff007f; /* Your signature hotpink info read-out text */
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 2px;
 }
