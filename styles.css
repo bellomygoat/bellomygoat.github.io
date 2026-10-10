@@ -395,3 +395,31 @@ input::placeholder, textarea::placeholder {
 .bg-solid {
     background-image: none !important;
 }
+
+/* ==========================================
+   11. PANEL 2 CENTERING & SKILL MARQUEE BANNER
+   ========================================== */
+   .profile-image-container-centered {
+    display: block;            
+    margin: 15px auto; /* Centers the picture block horizontally */
+    width: 130px;              
+    height: 130px;  
+    background-color: #ffffff;
+    border: 3px inset #888888; /* Inset retro frame chiseled shadow */
+    box-sizing: border-box;
+}
+
+.skill-marquee-container {
+    background-color: #0d1117; /* Dark matching terminal background */
+    border: 2px inset #ffffff;
+    padding: 6px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+
+.skill-marquee-container marquee {
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+    color: #00ff00; /* Matrix terminal glowing text */
+    text-shadow: 0 0 3px rgba(0, 255, 0, 0.5);
+}

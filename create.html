@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bello's workspace // terminal_spawn</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body {
+            font-family: 'Courier Prime', monospace;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .retro-window {
+            background-color: #c0c0c0;
+            border: 3px outset #ffffff;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.6);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .window-titlebar {
+            background: linear-gradient(90deg, #cf57ed, #9b02cf);
+            color: white;
+            padding: 4px 8px;
+            font-family: 'VT323', monospace;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .titlebar-buttons a {
+            background-color: #c0c0c0;
+            color: black;
+            border: 2px outset #fff;
+            padding: 0px 6px;
+            font-size: 0.75rem;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .window-content {
+            padding: 30px;
+            text-align: center;
+        }
+        .submit-button {
+            background-color: #c0c0c0;
+            color: black;
+            border: 3px outset #ffffff;
+            padding: 8px;
+            font-family: 'VT323', monospace;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 100%;
+            max-width: 250px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .bg-grid { background-image: radial-gradient(rgba(0,0,0,0.2) 15%, transparent 15%); background-size: 8px 8px; }
+        .bg-pixels { background-image: linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%), linear-gradient(-45deg, rgba(0,0,0,0.05) 25%, transparent 25%); background-size: 10px 10px; }
+    </style>
+</head>
+<body id="user-body" class="bg-grid" style="background-color: #ff007f;">
+
+    <div class="retro-window">
+        <div class="window-titlebar">
+            <span id="title-readout">visitor_workspace.sys</span>
+            <div class="titlebar-buttons"><a href="index.html">[EXIT_SYSTEM]</a></div>
+        </div>
+        <div class="window-content">
+            <h1 id="header-readout" style="color: #000080; font-family: 'VT323', monospace; font-size: 2.8rem; margin: 0 0 15px 0;">˗ˏˋ ꒰ user's system ꒱ ˎˊ˗</h1>
+            
+            <div style="border: 3px inset #888888; background-color: #0d1117; width: 100px; height: 100px; margin: 20px auto; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #00ff00; text-shadow: 0 0 5px #00ff00;">
+                <i class="fas fa-terminal"></i>
+            </div>
+            
+            <h3 style="margin-top: 20px; font-family: 'VT323', monospace; font-size: 1.6rem; color: #000080; letter-spacing: 1px;">CURRENT OPERATION:</h3>
+            <p id="status-readout" style="font-weight: bold; font-size: 1.1rem; color: #000; margin: 5px 0 25px 0;">⋆ loading diagnostics...</p>
+            
+            <div style="border-top: 2px dashed #888888; padding-top: 20px;">
+                <a href="index.html" class="submit-button">LOG_OUT.SH</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Parameters Reading Script -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name') || 'Guest';
+        const status = urlParams.get('status') || 'Exploring';
+        const color = urlParams.get('color') || '#ff007f';
+        const wallpaper = urlParams.get('wallpaper') || 'bg-grid';
+
+        document.getElementById('user-body').style.backgroundColor = color;
+        document.getElementById('user-body').className = wallpaper;
+        document.getElementById('title-readout').textContent = name.toLowerCase() + "_workspace.sys";
+        document.getElementById('header-readout').textContent = "˗ˏˋ ꒰ " + name + "'s system ꒱ ˎˊ˗";
+        document.getElementById('status-readout').textContent = "⋆ " + status;
+    </script>
+</body>
+</html>
