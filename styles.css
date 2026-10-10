@@ -7,11 +7,11 @@
     background-image: radial-gradient(#000000 20%, transparent 20%);
     background-size: 6px 10px; 
     margin: 0;
-    padding: 30px 20px;
+    padding: 50px 50px;
     display: flex;
     flex-direction: column;   
     align-items: center;       
-    gap: 30px; 
+    gap: 20px; 
     min-height: 100vh;
     box-sizing: border-box;
     width: 100%;
